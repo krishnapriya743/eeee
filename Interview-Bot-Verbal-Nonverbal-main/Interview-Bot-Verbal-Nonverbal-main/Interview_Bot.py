@@ -102,10 +102,10 @@ st.set_page_config(
     page_icon="👋",
 )
 
-openai_api_key = st.sidebar.text_input('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')
+openai_api_key = st.sidebar.text_input('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',type='password')
 if st.sidebar.button('submit'):
     with open('.env', 'w') as f:
-        f.write(f'OPENAI_API_KEY="{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}"')
+        f.write(f'OPENAI_API_KEY="{openai_api_key}"')
     load_dotenv()
 st.write("# Let's Prepare You For That Interview!")
 
